@@ -4,16 +4,22 @@
     margin-left: auto; 
     margin-right: auto;
     position: relative;
-    background: gray;
+    background: #DCDCDC;
 }
 #tortuga {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+    width: 180px;
+    position: absolute;
 }
 
 #tortuga-img {
+    width: 100%;
+}
+
+#enemy {
+    width: 180px;
+    position: absolute;
+}
+
+#enemy-img {
     width: 100%;
 }

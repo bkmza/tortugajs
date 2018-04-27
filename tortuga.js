@@ -2,12 +2,10 @@
 
     console.log("tortuga.js is defining...");
 
-    var element = document.getElementById("tortuga");
+    Tortuga = Object.create(new Movable("tortuga"));
+    Tortuga.moveUp = function(){};
+    Tortuga.moveDown = function(){};
 
-    Tortuga = Object.create(new Movable(element));
-
-    Tortuga.element.style.left= 200 + 'px';
-    Tortuga.element.style.top= 200 + 'px';
-
-    Tortuga.createdDate = new Date();
+    Tortuga.element.style.left = 10 + 'px';
+    Tortuga.element.style.top = Tortuga.getFloatParentHeight() - Tortuga.getFloatHeight() + 'px';
 })();

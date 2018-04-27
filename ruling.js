@@ -2,8 +2,7 @@
 
     console.log("ruling.js is defining...");
 
-    var htmlElement = document.getElementsByTagName("html")[0];
-    htmlElement.onkeydown = function(e) {
+    window.addEventListener("keydown", function(e) {
         switch(e.keyCode) {
             case 37:
                 Tortuga.moveLeft();
@@ -20,5 +19,7 @@
             default:
                 console.log("Not supported action.");
         }
-    };
+    });
+
+    Enemy.run();
 })();
