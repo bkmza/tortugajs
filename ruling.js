@@ -1,20 +1,24 @@
 (function() {
+
+    console.log("ruling.js is defining...");
+
     var htmlElement = document.getElementsByTagName("html")[0];
-    console.log(htmlElement.onkeydown);
+    var tortugaElement = document.getElementById("tortuga");
+    var movable = new Movable(tortugaElement);
     htmlElement.onkeydown = function(e) {
         var tortuga = document.getElementById("tortuga");
         switch(e.keyCode) {
-            case 37: // left
-                tortuga.style.left = parseInt(tortuga.style.left) - 5 + 'px';
+            case 37:
+                movable.moveLeft();
             break;
-            case 39: // right
-                tortuga.style.left = parseInt(tortuga.style.left) + 5 + '%';
+            case 39:
+                movable.moveRight();
             break;
-            case 38: // up
-                tortuga.style.top=parseInt(tortuga.style.top) - 5 + 'px';
+            case 38:
+                movable.moveUp();
             break;
-            case 40: // down
-            tortuga.style.top=parseInt(tortuga.style.top)+ 5 + 'px';
+            case 40:
+                movable.moveDown();
             break;
             default:
                 console.log("Not supported action.");
