@@ -3,22 +3,19 @@
     console.log("ruling.js is defining...");
 
     var htmlElement = document.getElementsByTagName("html")[0];
-    var tortugaElement = document.getElementById("tortuga");
-    var movable = new Movable(tortugaElement);
     htmlElement.onkeydown = function(e) {
-        var tortuga = document.getElementById("tortuga");
         switch(e.keyCode) {
             case 37:
-                movable.moveLeft();
+                Tortuga.moveLeft();
             break;
             case 39:
-                movable.moveRight();
+                Tortuga.moveRight();
             break;
             case 38:
-                movable.moveUp();
+                Tortuga.moveUp();
             break;
             case 40:
-                movable.moveDown();
+                Tortuga.moveDown();
             break;
             default:
                 console.log("Not supported action.");
