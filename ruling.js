@@ -21,5 +21,11 @@
         }
     });
 
-    Enemy.run();
+    getRandomInt = function getRandomInt(min, max) {
+        var randomInt = Math.floor(Math.random() * (max - min)) + min;
+        console.log("getRandomInt = " + randomInt);
+        return randomInt;
+    }
+
+    Enemy.restart();
 })();

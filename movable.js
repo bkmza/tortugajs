@@ -4,7 +4,7 @@
 
     Movable = function(id) {
         var element = document.getElementById(id);
-
+        
         getElement = function() { 
             return document.getElementById(id); 
         },
@@ -27,6 +27,7 @@
             element.style.top = parseFloat(element.style.top) + 1 + 'px';
             // console.log("--->>> Movable.moveDown called <<<---");
         },
+        
 
         getFloatParentHeight = function() { return parseFloat(element.parentElement.getBoundingClientRect().height); },
         getFloatParentWidth = function() { return parseFloat(element.parentElement.getBoundingClientRect().width); },
@@ -42,6 +43,7 @@
             moveRight: moveRight,
             moveUp: moveUp,
             moveDown: moveDown,
+
             element: element,
 
             getFloatHeight: getFloatHeight,
