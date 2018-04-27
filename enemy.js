@@ -10,6 +10,7 @@
         Enemy.element.style.left = xCoordinate;
         Enemy.element.style.top = 10 + 'px';
 
+        Enemy.setVerticalSpeed(getRandomInt(1,10));
         Enemy.run();
     };
 
@@ -19,7 +20,7 @@
             // console.log(Enemy.getFloatTop());
             // console.log(Tortuga.getFloatTop());
             // console.log("Tortuga left coordinates: " + Tortuga.element.style.left);
-            if (Enemy.getFloatTop() >= Enemy.getFloatParentHeight())
+            if (Enemy.getFloatTop() + + Enemy.getFloatHeight() >= Enemy.getFloatParentHeight())
             {            
                 clearInterval(id);
                 Enemy.restart();
@@ -33,8 +34,6 @@
             {
                 Enemy.moveDown();
             }
-        }
+        };
     };
-
-
 })();
