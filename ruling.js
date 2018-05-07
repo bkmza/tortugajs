@@ -5,10 +5,14 @@
     window.addEventListener("keydown", function(e) {
         switch(e.keyCode) {
             case 37:
-                Tortuga.moveLeft();
+                if(!Tortuga.isInLeftZone()) {
+                    Tortuga.moveLeft();
+                }
             break;
             case 39:
-                Tortuga.moveRight();
+                if(Tortuga.isInLeftZone()) {
+                    Tortuga.moveRight();
+                }                
             break;
             case 38:
                 Tortuga.moveUp();
