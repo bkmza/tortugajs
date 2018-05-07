@@ -23,8 +23,5 @@
 
     getRandomInt = function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    // TODO: remove dependency to Enemy entity
-    Enemy.restart();
+    };
 })();
