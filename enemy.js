@@ -29,8 +29,8 @@
     };
 
     Enemy.run = function() {
-        var id = setInterval(moveOn, 10);
-        function moveOn() {
+        var id = setInterval(moveEnemy, 10);
+        function moveEnemy() {
             if (Enemy.isOutOfScreen())
             {            
                 clearInterval(id);
@@ -49,7 +49,7 @@
     };
 
     Enemy.getCurrentSpeed = function() {
-        return getRandomInt(3, 10) + this.level;
+        return getRandomInt(3, 8) + this.level;
     };
 
     Enemy.isOutOfScreen = function() {

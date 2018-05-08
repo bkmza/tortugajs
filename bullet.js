@@ -4,12 +4,14 @@
 
     Bullet.attack = function() {
 
+        clearInterval(id);
+        
         this.setVerticalSpeed(7);
-        this.element.style.left = 10 + 'px';
+        this.element.style.left = Tortuga.isInLeftZone() ? 10 : 210 + 'px';
         this.element.style.top = this.getFloatParentHeight() - this.getFloatHeight() + 'px';
 
-        var id = setInterval(moveOn, 5);
-        function moveOn() {
+        var id = setInterval(moveBullet, 5);
+        function moveBullet() {
             if (Bullet.isOutOfScreen())
             {            
                 clearInterval(id);
