@@ -3,6 +3,7 @@
     console.log("enemy.js is defining...");
 
     Enemy = Object.create(new Movable("enemy"));
+    Enemy.animationInterval;
     Enemy.number = 0;
     Enemy.level = 0;
 
@@ -16,6 +17,11 @@
     };
 
     Enemy.restart = function() {
+
+        if(Enemy.animationInterval != undefined) {
+            clearInterval(this.animationInterval);
+        }
+
         this.number += 1;
         if(this.number % 10 == 0) {
             this.level += 1;
@@ -29,16 +35,16 @@
     };
 
     Enemy.run = function() {
-        var id = setInterval(moveEnemy, 10);
+        this.animationInterval = setInterval(moveEnemy, 10);
         function moveEnemy() {
             if (Enemy.isOutOfScreen())
             {            
-                clearInterval(id);
+                clearInterval(Enemy.animationInterval);
                 Enemy.restart();
             } 
             else if (Enemy.isSmashedTortuga())
             {
-                clearInterval(id);
+                clearInterval(Enemy.animationInterval);
                 alert("Enemy crashed you!");
             }
             else
@@ -49,7 +55,7 @@
     };
 
     Enemy.getCurrentSpeed = function() {
-        return getRandomInt(3, 8) + this.level;
+        return getRandomInt(1, 5) + this.level;
     };
 
     Enemy.isOutOfScreen = function() {

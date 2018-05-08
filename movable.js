@@ -27,6 +27,7 @@
             // console.log("--->>> Movable.moveDown called <<<---");
         },
         setVerticalSpeed = function(speed) {
+            console.log("speed is " + speed);
             if(!speed) {
                 speed = 1;
             }
