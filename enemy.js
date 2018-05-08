@@ -55,7 +55,7 @@
     };
 
     Enemy.getCurrentSpeed = function() {
-        return getRandomInt(1, 5) + this.level;
+        return getRandomInt(3, 8) + this.level;
     };
 
     Enemy.isOutOfScreen = function() {

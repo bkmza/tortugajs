@@ -4,8 +4,6 @@
 
     Tortuga = Object.create(new Movable("tortuga"));
 
-    Tortuga.frags = 0;
-
     Tortuga.moveUp = function(){};
     Tortuga.moveDown = function(){};
     Tortuga.init = function() {
