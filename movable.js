@@ -19,7 +19,7 @@
             // console.log("--->>> Movable.moveRight called <<<---");
         },
         moveUp = function() {
-            element.style.top = parseFloat(element.style.top) - 1 + 'px';
+            element.style.top = parseFloat(element.style.top) - verticalSpeed + 'px';
             // console.log("--->>> Movable.moveUp called <<<---");
         },
         moveDown = function() {

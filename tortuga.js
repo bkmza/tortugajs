@@ -3,15 +3,22 @@
     console.log("tortuga.js is defining...");
 
     Tortuga = Object.create(new Movable("tortuga"));
+
+    Tortuga.frags = 0;
+
     Tortuga.moveUp = function(){};
     Tortuga.moveDown = function(){};
     Tortuga.init = function() {
         
         console.log("Tortuga initialization...");
-        // console.log("Tortuga height = " + Tortuga.getFloatHeight());
 
-        Tortuga.element.style.left = 10 + 'px';
-        Tortuga.element.style.top = Tortuga.getFloatParentHeight() - Tortuga.getFloatHeight() + 'px';
+        this.element.style.left = 10 + 'px';
+        this.element.style.top = this.getFloatParentHeight() - this.getFloatHeight() + 'px';
+    };
+
+    Tortuga.attack = function() {
+
+        Bullet.attack();
     };
 
     window.addEventListener("keydown", function(e) {
@@ -31,6 +38,9 @@
             break;
             case 40:
                 Tortuga.moveDown();
+            break;
+            case 32: // space
+                Tortuga.attack();
             break;
             default:
                 console.log("Not supported action.");

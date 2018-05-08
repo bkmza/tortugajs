@@ -11,8 +11,8 @@
         console.log("Enemy initialization...");
 
         var xCoordinate = new Date().getMilliseconds() % 2 == 1 ? 10 : 210 + 'px';
-        Enemy.element.style.left = xCoordinate;
-        Enemy.element.style.top = 10 + 'px';
+        this.element.style.left = xCoordinate;
+        this.element.style.top = 10 + 'px';
     };
 
     Enemy.restart = function() {
@@ -53,10 +53,10 @@
     };
 
     Enemy.isOutOfScreen = function() {
-        return Enemy.getFloatTop() + Enemy.getFloatHeight() >= Enemy.getFloatParentHeight();
+        return this.getFloatTop() + this.getFloatHeight() >= this.getFloatParentHeight();
     };
 
     Enemy.isSmashedTortuga = function() {
-        return Enemy.getFloatTop() + Enemy.getFloatHeight() >= Tortuga.getFloatTop() && Enemy.isInLeftZone() == Tortuga.isInLeftZone();
-    }
+        return this.getFloatTop() + this.getFloatHeight() >= Tortuga.getFloatTop() && this.isInLeftZone() == Tortuga.isInLeftZone();
+    };
 })();

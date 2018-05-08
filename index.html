@@ -8,7 +8,7 @@
                 <div id="left-container">
                     <div id="enemy-level"></div>
                     <div id="enemy-number"></div>
-                    <div id="hints>"></div>
+                    <div id="enemy-frags>"></div>
                 </div>
                 <div id="center-container">
                         <div id="leftSide"></div>
@@ -18,6 +18,9 @@
                             <div id="tortuga">
                                 <img src="tortuga.png" id="tortuga-img" />
                             </div>
+                            <div id="bullet">
+                                <img src="bullet.png" id="bulletImg" />
+                            </div>
                 </div>
                 <div id="right-container"></div>
         </div>
@@ -25,6 +28,7 @@
         <script type="text/javascript" src="movable.js"></script>
         <script type="text/javascript" src="tortuga.js"></script>
         <script type="text/javascript" src="enemy.js"></script>
+        <script type="text/javascript" src="bullet.js"></script>
         <script>
             window.addEventListener("load", function(){
                 Tortuga.init();
