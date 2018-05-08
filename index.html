@@ -5,8 +5,13 @@
     <body>
 
         <div id="cointainer">
-                <div id="left-container"></div>
+                <div id="left-container">
+                    <div id="enemy-level"></div>
+                    <div id="enemy-number"></div>
+                    <div id="hints>"></div>
+                </div>
                 <div id="center-container">
+                        <div id="leftSide"></div>
                         <div id="enemy">
                                 <img src="enemy.png" id="enemy-img" />
                             </div>
@@ -20,7 +25,6 @@
         <script type="text/javascript" src="movable.js"></script>
         <script type="text/javascript" src="tortuga.js"></script>
         <script type="text/javascript" src="enemy.js"></script>
-        <script type="text/javascript" src="ruling.js"></script>
         <script>
             window.addEventListener("load", function(){
                 Tortuga.init();

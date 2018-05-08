@@ -3,26 +3,29 @@
     height: 100%;
     font-size: 12px;
     overflow: hidden; /* contain floated elements */
-    background: #ccc
+    background: white;
 }
 #left-container {
     float: left; 
     width: 33%;
     height: 100%;
-    background-color: #bbb;
+    background-color: white;
+    position: relative;
 }
 #right-container {
     float: left;
     width: 33%;
     height: 100%;
-    background-color: #bbb;
+    background-color: white;
 }
 #center-container {
     width: 400px;
     height: 100%;
     float: left;
     position: relative;
-    background: #DCDCDC;
+    background: white;
+    border-left: 4px solid black; 
+    border-right: 4px solid black; 
 }
 #tortuga {
     width: 180px;
@@ -37,7 +40,27 @@
     width: 180px;
     position: absolute;
 }
-
 #enemy-img {
     width: 100%;
+}
+#left-container div {
+    height: 33%;
+    border-bottom: 4px dotted black; 
+}
+#enemy-level {
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    line-height: 250px;
+}
+#enemy-number {
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    line-height: 250px;
+}
+#leftSide {
+    width: 50%;
+    height: 100%;
+    border-right: 4px dashed black; 
 }

@@ -3,6 +3,8 @@
     console.log("enemy.js is defining...");
 
     Enemy = Object.create(new Movable("enemy"));
+    Enemy.number = 0;
+    Enemy.level = 0;
 
     Enemy.init = function() {
         
@@ -14,9 +16,16 @@
     };
 
     Enemy.restart = function() {
-        Enemy.init();
-        Enemy.setVerticalSpeed(getRandomInt(1,10));
-        Enemy.run();
+        this.number += 1;
+        if(this.number % 10 == 0) {
+            this.level += 1;
+        }
+        document.getElementById("enemy-number").innerHTML = this.number;
+        document.getElementById("enemy-level").innerHTML = this.level;
+
+        this.init();
+        this.setVerticalSpeed(this.getCurrentSpeed());
+        this.run();
     };
 
     Enemy.run = function() {
@@ -37,6 +46,10 @@
                 Enemy.moveDown();
             }
         };
+    };
+
+    Enemy.getCurrentSpeed = function() {
+        return getRandomInt(3, 10) + this.level;
     };
 
     Enemy.isOutOfScreen = function() {
